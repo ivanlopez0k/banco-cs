@@ -37,7 +37,7 @@
             labelId = new Label();
             panelOperaciones = new Panel();
             lblMensaje = new Label();
-            button1 = new Button();
+            btnCerrarSesion = new Button();
             txtRetirar = new TextBox();
             btnRetirar = new Button();
             txtDepositar = new TextBox();
@@ -118,7 +118,7 @@
             // panelOperaciones
             // 
             panelOperaciones.Controls.Add(lblMensaje);
-            panelOperaciones.Controls.Add(button1);
+            panelOperaciones.Controls.Add(btnCerrarSesion);
             panelOperaciones.Controls.Add(txtRetirar);
             panelOperaciones.Controls.Add(btnRetirar);
             panelOperaciones.Controls.Add(txtDepositar);
@@ -140,15 +140,15 @@
             lblMensaje.Text = " ";
             lblMensaje.Click += label2_Click;
             // 
-            // button1
+            // btnCerrarSesion
             // 
-            button1.Location = new Point(85, 182);
-            button1.Name = "button1";
-            button1.Size = new Size(112, 23);
-            button1.TabIndex = 6;
-            button1.Text = "Cerrar Sesión";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click_1;
+            btnCerrarSesion.Location = new Point(85, 182);
+            btnCerrarSesion.Name = "btnCerrarSesion";
+            btnCerrarSesion.Size = new Size(112, 23);
+            btnCerrarSesion.TabIndex = 6;
+            btnCerrarSesion.Text = "Cerrar Sesión";
+            btnCerrarSesion.UseVisualStyleBackColor = true;
+            btnCerrarSesion.Click += btnCerrarSesion_Click;
             // 
             // txtRetirar
             // 
@@ -166,7 +166,7 @@
             btnRetirar.TabIndex = 4;
             btnRetirar.Text = "Retirar";
             btnRetirar.UseVisualStyleBackColor = true;
-            btnRetirar.Click += button1_Click;
+            btnRetirar.Click += btnRetirar_Click;
             // 
             // txtDepositar
             // 
@@ -178,12 +178,14 @@
             // 
             // btnDepositar
             // 
+            btnDepositar.AccessibleName = "btnDepositar";
             btnDepositar.Location = new Point(12, 61);
             btnDepositar.Name = "btnDepositar";
             btnDepositar.Size = new Size(75, 23);
             btnDepositar.TabIndex = 2;
             btnDepositar.Text = "Depositar";
             btnDepositar.UseVisualStyleBackColor = true;
+            btnDepositar.Click += btnDepositar_Click;
             // 
             // lblSaldo
             // 
@@ -208,7 +210,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(355, 261);
+            ClientSize = new Size(603, 290);
             Controls.Add(panelOperaciones);
             Controls.Add(panelLogin);
             Name = "Banco";
@@ -235,7 +237,7 @@
         private TextBox txtRetirar;
         private Button btnRetirar;
         private TextBox txtDepositar;
-        private Button button1;
+        private Button btnCerrarSesion;
         private Label lblMensaje;
         private Label lblLoginMensaje;
     }

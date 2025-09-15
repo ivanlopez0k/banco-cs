@@ -33,6 +33,48 @@ namespace Banco.FE
             panelOperaciones.Visible = false;
 
         }
+        private void btnDepositar_Click(object sender, EventArgs e)
+        {
+            if (!decimal.TryParse(txtDepositar.Text, out decimal monto) || monto <= 0)
+            {
+                MessageBox.Show("Ingrese un monto válido");
+                return;
+            }
+
+            cuentaActual.Saldo += monto;
+            lblMensaje.Text = $"Depósito realizado. Nuevo saldo: ${cuentaActual.Saldo}";
+            lblSaldo.Text = $"{cuentaActual.Saldo:C}";
+        }
+
+        private void btnRetirar_Click(object sender, EventArgs e)
+        {
+            if (!decimal.TryParse(txtRetirar.Text, out decimal monto) || monto <= 0)
+            {
+                MessageBox.Show("Ingrese un monto válido");
+                return;
+            }
+
+            if (monto > cuentaActual.Saldo)
+            {
+                MessageBox.Show("Saldo insuficiente");
+                return;
+            }
+
+            cuentaActual.Saldo -= monto;
+            lblMensaje.Text = $"Retiro realizado. Nuevo saldo: ${cuentaActual.Saldo}";
+            lblSaldo.Text = $"{cuentaActual.Saldo:C}";
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            cuentaActual = null;
+            panelOperaciones.Visible = false;
+            panelLogin.Visible = true;
+            idCuenta.Text = "";
+            contrasena.Text = "";
+            lblLoginMensaje.Text = "";
+        }
+    
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -50,16 +92,6 @@ namespace Banco.FE
         }
 
         private void label1_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
         {
 
         }
