@@ -44,6 +44,7 @@
             btnDepositar = new Button();
             lblSaldo = new Label();
             label1 = new Label();
+            btnInstrucciones = new Button();
             panelLogin.SuspendLayout();
             panelOperaciones.SuspendLayout();
             SuspendLayout();
@@ -206,11 +207,22 @@
             label1.Text = "SALDO ACTUAL:";
             label1.Click += label1_Click_2;
             // 
+            // btnInstrucciones
+            // 
+            btnInstrucciones.Location = new Point(12, 265);
+            btnInstrucciones.Name = "btnInstrucciones";
+            btnInstrucciones.Size = new Size(89, 23);
+            btnInstrucciones.TabIndex = 2;
+            btnInstrucciones.Text = "Instrucciones";
+            btnInstrucciones.UseVisualStyleBackColor = true;
+            btnInstrucciones.Click += bntInstrucciones_Click;
+            // 
             // Banco
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(603, 290);
+            Controls.Add(btnInstrucciones);
             Controls.Add(panelOperaciones);
             Controls.Add(panelLogin);
             Name = "Banco";
@@ -240,5 +252,6 @@
         private Button btnCerrarSesion;
         private Label lblMensaje;
         private Label lblLoginMensaje;
+        private Button btnInstrucciones;
     }
 }

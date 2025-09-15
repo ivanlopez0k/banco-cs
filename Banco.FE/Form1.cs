@@ -1,7 +1,12 @@
 namespace Banco.FE
 {
 
-
+    /* Hola profe, Las instrucciones las puse en el propio programa!
+     * Como tambien puse las cuentas, aún asi, las dejo aca asi puede copiar y pegar! 
+     * Cuenta: 115612 Contraseña: pepe123
+     * Cuenta: 141524 Contraseña: abc156
+     * Cuenta: 176982 Contraseña: aaa444
+     */
 
     public partial class Banco : Form
     {
@@ -75,6 +80,12 @@ namespace Banco.FE
             lblLoginMensaje.Text = "";
         }
     
+
+        private void bntInstrucciones_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Instrucciones:\n\n1. Ingrese su ID de cuenta y contraseña para iniciar sesion.\n2. Una vez que ingreso, puede depositar o retirar dinero.\n3. Para depositar, ingrese el monto y presione -Depositar-.\n4. Para retirar, ingrese el monto y presione -Retirar-.\n5. Puede cerrar sesion en cualquier momento presionando -Cerrar Sesion-.", "Instrucciones");
+            MessageBox.Show("Estas son las cuentas de prueba para ingresar \n Id:115612 Contraseña:pepe123 \n Id:141524 Contraseña:abc156 \n Id:176982 Contraseña:aaa444 ", "Cuentas para entrar");
+        }
 
         private void label1_Click(object sender, EventArgs e)
         {
