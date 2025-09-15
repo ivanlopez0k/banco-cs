@@ -1,6 +1,6 @@
 ﻿namespace Banco.FE
 {
-    partial class Form1
+    partial class Banco
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,50 +29,63 @@
         private void InitializeComponent()
         {
             panelLogin = new Panel();
+            lblLoginMensaje = new Label();
             btnIngresar = new Button();
-            contraseña = new TextBox();
+            contrasena = new TextBox();
             labelContraseña = new Label();
             idCuenta = new TextBox();
             labelId = new Label();
-            panel1 = new Panel();
-            label1 = new Label();
-            lblSaldo = new Label();
-            btnDepositar = new Button();
-            txtDepositar = new TextBox();
+            panelOperaciones = new Panel();
+            lblMensaje = new Label();
+            button1 = new Button();
             txtRetirar = new TextBox();
             btnRetirar = new Button();
-            button1 = new Button();
+            txtDepositar = new TextBox();
+            btnDepositar = new Button();
+            lblSaldo = new Label();
+            label1 = new Label();
             panelLogin.SuspendLayout();
-            panel1.SuspendLayout();
+            panelOperaciones.SuspendLayout();
             SuspendLayout();
             // 
             // panelLogin
             // 
+            panelLogin.Controls.Add(lblLoginMensaje);
             panelLogin.Controls.Add(btnIngresar);
-            panelLogin.Controls.Add(contraseña);
+            panelLogin.Controls.Add(contrasena);
             panelLogin.Controls.Add(labelContraseña);
             panelLogin.Controls.Add(idCuenta);
             panelLogin.Controls.Add(labelId);
-            panelLogin.Location = new Point(16, 31);
+            panelLogin.Location = new Point(63, 31);
             panelLogin.Name = "panelLogin";
             panelLogin.Size = new Size(245, 228);
             panelLogin.TabIndex = 0;
             // 
+            // lblLoginMensaje
+            // 
+            lblLoginMensaje.AutoSize = true;
+            lblLoginMensaje.Location = new Point(88, 155);
+            lblLoginMensaje.Name = "lblLoginMensaje";
+            lblLoginMensaje.Size = new Size(10, 15);
+            lblLoginMensaje.TabIndex = 5;
+            lblLoginMensaje.Text = " ";
+            // 
             // btnIngresar
             // 
-            btnIngresar.Location = new Point(84, 182);
+            btnIngresar.Location = new Point(69, 182);
             btnIngresar.Name = "btnIngresar";
             btnIngresar.Size = new Size(75, 23);
             btnIngresar.TabIndex = 4;
             btnIngresar.Text = "Ingresar";
             btnIngresar.UseVisualStyleBackColor = true;
+            btnIngresar.Click += btnIngresar_Click_1;
             // 
-            // contraseña
+            // contrasena
             // 
-            contraseña.Location = new Point(59, 123);
-            contraseña.Name = "contraseña";
-            contraseña.Size = new Size(100, 23);
-            contraseña.TabIndex = 3;
+            contrasena.Location = new Point(59, 123);
+            contrasena.Name = "contrasena";
+            contrasena.Size = new Size(100, 23);
+            contrasena.TabIndex = 3;
             // 
             // labelContraseña
             // 
@@ -102,55 +115,40 @@
             labelId.Text = "ID de Cuenta";
             labelId.Click += label1_Click;
             // 
-            // panel1
+            // panelOperaciones
             // 
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(txtRetirar);
-            panel1.Controls.Add(btnRetirar);
-            panel1.Controls.Add(txtDepositar);
-            panel1.Controls.Add(btnDepositar);
-            panel1.Controls.Add(lblSaldo);
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(267, 31);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(309, 228);
-            panel1.TabIndex = 1;
+            panelOperaciones.Controls.Add(lblMensaje);
+            panelOperaciones.Controls.Add(button1);
+            panelOperaciones.Controls.Add(txtRetirar);
+            panelOperaciones.Controls.Add(btnRetirar);
+            panelOperaciones.Controls.Add(txtDepositar);
+            panelOperaciones.Controls.Add(btnDepositar);
+            panelOperaciones.Controls.Add(lblSaldo);
+            panelOperaciones.Controls.Add(label1);
+            panelOperaciones.Location = new Point(267, 31);
+            panelOperaciones.Name = "panelOperaciones";
+            panelOperaciones.Size = new Size(309, 228);
+            panelOperaciones.TabIndex = 1;
             // 
-            // label1
+            // lblMensaje
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(85, 22);
-            label1.Name = "label1";
-            label1.Size = new Size(95, 15);
-            label1.TabIndex = 0;
-            label1.Text = "SALDO ACTUAL:";
-            label1.Click += label1_Click_2;
+            lblMensaje.AutoSize = true;
+            lblMensaje.Location = new Point(116, 155);
+            lblMensaje.Name = "lblMensaje";
+            lblMensaje.Size = new Size(10, 15);
+            lblMensaje.TabIndex = 7;
+            lblMensaje.Text = " ";
+            lblMensaje.Click += label2_Click;
             // 
-            // lblSaldo
+            // button1
             // 
-            lblSaldo.AutoSize = true;
-            lblSaldo.Location = new Point(186, 22);
-            lblSaldo.Name = "lblSaldo";
-            lblSaldo.Size = new Size(13, 15);
-            lblSaldo.TabIndex = 1;
-            lblSaldo.Text = "0";
-            // 
-            // btnDepositar
-            // 
-            btnDepositar.Location = new Point(12, 61);
-            btnDepositar.Name = "btnDepositar";
-            btnDepositar.Size = new Size(75, 23);
-            btnDepositar.TabIndex = 2;
-            btnDepositar.Text = "Depositar";
-            btnDepositar.UseVisualStyleBackColor = true;
-            // 
-            // txtDepositar
-            // 
-            txtDepositar.Location = new Point(116, 61);
-            txtDepositar.Name = "txtDepositar";
-            txtDepositar.Size = new Size(175, 23);
-            txtDepositar.TabIndex = 3;
-            txtDepositar.Text = "0";
+            button1.Location = new Point(85, 182);
+            button1.Name = "button1";
+            button1.Size = new Size(112, 23);
+            button1.TabIndex = 6;
+            button1.Text = "Cerrar Sesión";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
             // 
             // txtRetirar
             // 
@@ -170,29 +168,55 @@
             btnRetirar.UseVisualStyleBackColor = true;
             btnRetirar.Click += button1_Click;
             // 
-            // button1
+            // txtDepositar
             // 
-            button1.Location = new Point(85, 182);
-            button1.Name = "button1";
-            button1.Size = new Size(112, 23);
-            button1.TabIndex = 6;
-            button1.Text = "Cerrar Sesión";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click_1;
+            txtDepositar.Location = new Point(116, 61);
+            txtDepositar.Name = "txtDepositar";
+            txtDepositar.Size = new Size(175, 23);
+            txtDepositar.TabIndex = 3;
+            txtDepositar.Text = "0";
             // 
-            // Form1
+            // btnDepositar
+            // 
+            btnDepositar.Location = new Point(12, 61);
+            btnDepositar.Name = "btnDepositar";
+            btnDepositar.Size = new Size(75, 23);
+            btnDepositar.TabIndex = 2;
+            btnDepositar.Text = "Depositar";
+            btnDepositar.UseVisualStyleBackColor = true;
+            // 
+            // lblSaldo
+            // 
+            lblSaldo.AutoSize = true;
+            lblSaldo.Location = new Point(186, 22);
+            lblSaldo.Name = "lblSaldo";
+            lblSaldo.Size = new Size(13, 15);
+            lblSaldo.TabIndex = 1;
+            lblSaldo.Text = "0";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(85, 22);
+            label1.Name = "label1";
+            label1.Size = new Size(95, 15);
+            label1.TabIndex = 0;
+            label1.Text = "SALDO ACTUAL:";
+            label1.Click += label1_Click_2;
+            // 
+            // Banco
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(588, 290);
-            Controls.Add(panel1);
+            ClientSize = new Size(355, 261);
+            Controls.Add(panelOperaciones);
             Controls.Add(panelLogin);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "Banco";
+            Text = "Banco";
             panelLogin.ResumeLayout(false);
             panelLogin.PerformLayout();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            panelOperaciones.ResumeLayout(false);
+            panelOperaciones.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -202,9 +226,9 @@
         private Label labelId;
         private Label labelContraseña;
         private TextBox idCuenta;
-        private TextBox contraseña;
+        private TextBox contrasena;
         private Button btnIngresar;
-        private Panel panel1;
+        private Panel panelOperaciones;
         private Label label1;
         private Button btnDepositar;
         private Label lblSaldo;
@@ -212,5 +236,7 @@
         private Button btnRetirar;
         private TextBox txtDepositar;
         private Button button1;
+        private Label lblMensaje;
+        private Label lblLoginMensaje;
     }
 }
